@@ -1,0 +1,738 @@
+@charset "UTF-8";
+
+.account, .create {
+    position: relative;
+    padding-bottom: 50px;
+}
+
+body {
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
+p {
+    margin: 0;
+    font-size: 24px;
+}
+
+
+.top {
+    background-color: #ddd;
+    display:flex;
+    height: 6%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    background: url(../img/logo2.png) no-repeat;
+    height: 44px;
+    width: 92px;
+    margin-top :5px;
+}
+
+.page-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+footer {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    background-color: #ddd;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.topbtn, .botbtn {
+    height: 30px;
+    width: 100px;
+    margin: 0 20px;
+}
+
+.botbtn {
+    font-size: 18px;
+}
+
+h2 {
+    text-align: center;
+}
+h3 {
+    margin-left: 2%;
+}
+
+
+/* 数値入力のスピンボタンを削除 */
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+} 
+input[type="number"] { 
+  -moz-appearance:textfield; 
+} 
+
+
+/*
+.regibody{
+    width: 60%;
+    margin: 0 auto;
+}
+*/
+
+.form-wrapper {
+    background: #ddd;
+    margin: 1em auto;
+    padding: 1em 1em 0;
+}
+
+
+button {
+    border-radius: 5px;
+    border: solid 1px #999;
+}
+
+button:hover {
+    opacity: 80%;
+}
+
+button:active {
+	box-shadow: inset -2px -2px 1px #ddd,
+				inset 2px 2px 1px #999;
+}
+
+.g-btn {
+    width: 100%;
+    font-size: 20px;
+}
+
+
+.ten {
+    width: 47%;
+    height: 40%;
+    position: fixed;
+    bottom: 0;
+    /* margin-bottom: 2%; */
+    margin: 0 2% 2% 0;
+}
+
+.ten tr {
+    height: 25%;
+}
+
+.ten td {
+    width: 25%;
+}
+
+.tenKey {
+	font-size:	28pt;
+	height:		100%;
+	width:		100%;
+}
+
+
+
+
+/* index.html -------------------------------*/
+.index table {
+    width: 96%;
+    height: 80%;
+    margin: 5% auto;
+}
+
+.index table, .index td {
+    /* border: solid 1px; */
+	border-collapse: collapse;
+
+}
+
+.index tr {
+    height: 40%;
+}
+
+.index tr:first-child {
+    height: 20%;
+}
+
+.index td {
+	padding: 0px;
+	width: 0;
+}
+
+.cat {
+    color: #333;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+
+.menubtn {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+.menubtn a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 30px;
+    border-top: 4px solid #48ecc4;
+    border-right: 4px solid #0a5f4a;
+    border-bottom: 4px solid #0f745b;
+    border-left: 4px solid #8cf9de;
+    border-radius: 4px;
+    background-color: #11a37f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menubtn :active {
+  border-top: 4px solid #0f745b;
+  border-right: 4px solid #8cf9de;
+  border-bottom: 4px solid #48ecc4;
+  border-left: 4px solid #0a5f4a;
+}
+
+i {
+    margin-right: 4px;
+}
+
+
+
+
+
+/* login.html -------------------------------*/
+.loginbody{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.loginform {
+	padding: 1em 0 2em;
+	margin-bottom: 0;
+}
+
+.form-item {
+	margin: 0 auto 1em;
+	width: 70%;
+}
+
+.form-item input {
+	background: #fafafa;
+	border: none;
+	border-bottom: 2px solid #5c5;
+	color: #666;
+	font-size: 28px;
+	height: 50px;
+	transition: border-color 0.3s;
+	width: 100%;
+}
+
+.form-item input:focus {
+	border-bottom: 2px solid #0cc;
+	outline: none;
+}
+
+
+.loginbtn {
+    display: flex;
+    justify-content: center;
+}
+
+
+.lbtn {
+    font-size: 20px;
+    width: 70%;
+    height: 50px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #5c5;
+}
+
+
+.loginbody .ten {
+    width: 100%;
+    height: 50%;
+    position: unset;
+    margin: unset;
+}
+
+
+
+
+
+/* deposit.html -------------------------------*/
+.depobody {
+    display: flex;
+}
+
+.depo-log {
+    width: 47%;
+    margin: 0 2%;
+}
+
+.depo-log tr {
+    height: 48px;
+    border-bottom: 1px solid #999;
+}
+
+.depo-log table {
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+.depo-input{
+    width: 47%;
+    margin: 0 2% 0 0;
+}
+
+.depo-log .form-wrapper {
+    background-color: #ffc;
+    padding-bottom: 1em;
+}
+
+.depoform {
+    padding-bottom: 2em;
+}
+
+
+.depobtn {
+    display: flex;
+    justify-content: center;
+}
+
+
+.dbtn {
+    font-size: 20px;
+    width: 70%;
+    height: 50px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #6cf;
+}
+
+.depobody .dbtn {
+  background-color: #fc6;
+}
+
+
+
+
+/* payment.html -------------------------------*/
+.paybody {
+    display: flex;
+}
+
+.payform {
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.pay-input{
+    width: 47%;
+    margin: 0 2% 0 0;
+}
+
+.pay-log {
+    width: 47%;
+    margin: 0 2%;
+}
+
+.pay-log tr {
+    height: 48px;
+    border-bottom: 1px solid #999;
+}
+
+.pay-log table {
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.pay-log .form-wrapper {
+    background-color: #fcc;
+    padding-bottom: 1em;
+}
+
+.pay-input .form-wrapper {
+    padding: 1em 0 0;
+}
+
+
+.paysel {
+    text-align: center;
+    margin: 1em;
+}
+
+.paysel select {
+    font-size: 28px;
+    height: 48px;
+}
+
+
+.pfb {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.pfb td:first-child {
+    height: 52px;
+    width: 70%;
+}
+
+.pay-input .form-item {
+    margin: 0;
+    width: 96%;
+    height: 50px;
+}
+
+.form-box {
+    background: #fafafa;
+    border: none;
+    border-bottom: 2px solid #999;
+    color: #666;
+    font-size: 20px;
+    height: 46px;
+    width: 96%;
+    margin-top: 4px;
+}
+
+.pbtn {
+    font-size: 20px;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #f88;
+}
+
+
+
+
+/* inspection.html -------------------------------*/
+.inspbody {
+    display: flex;
+}
+
+.insp-log {
+    width: 47%;
+    margin: 0 2%;
+}
+
+.insp-log tr {
+    height: 48px;
+    border-bottom: 1px solid #999;
+}
+
+.insp-log table {
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.insp-log .form-wrapper {
+    background-color: #cef;
+    padding-bottom: 1em;
+}
+
+.insp-log td:nth-child(3) {
+    text-align: right;
+}
+
+
+.insp-input{
+    width: 47%;
+    margin: 0 2% 0 0;
+}
+
+.inspform {
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.inspform p {
+    margin-bottom: 16px;
+}
+
+
+
+
+/* close.html -------------------------------*/
+.closebody {
+    display: flex;
+}
+
+.close-log {
+    width: 47%;
+    margin: 0 2%;
+}
+
+.close-log tr {
+    height: 48px;
+    border-bottom: 1px solid #999;
+}
+
+.close-log table {
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.close-log .form-wrapper {
+    background-color: #ccf;
+    padding-bottom: 1em;
+}
+
+.close-log td:nth-child(3) {
+    text-align: right;
+}
+
+
+.close-input{
+    width: 47%;
+    margin: 0 2% 0 0;
+}
+
+.closeform {
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.closeform p {
+    margin-bottom: 16px;
+}
+
+.closebody .dbtn {
+  background-color: #66f;
+}
+
+
+
+
+/* checks.html -------------------------------*/
+.checks table {
+    width: 96%;
+    height: 86%;
+    margin: 2% auto;
+}
+
+.checks td {
+    /* border-bottom: solid 1px; */
+	border-collapse: collapse;
+}
+
+.checks tr {
+    height: calc(100%/6);
+}
+
+.checks td {
+    text-align: right;
+    width: 25%;
+}
+
+
+.chkbtn {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    padding: 2% 1%;
+}
+
+.chkbtn a{
+    width: 100%;
+    padding: 5px;
+    color: #333;
+    font-size: 20px;
+    border-top: 3px solid #feb;
+    border-right: 3px solid #fd3;
+    border-bottom: 3px solid #fb3;
+    border-left: 3px solid #feb;
+    border-radius: 4px;
+    background-color: #ffc;
+    text-decoration: none;
+}
+
+.chkbtn :active {
+  border-top: 3px solid #fb3;
+  border-right: 3px solid #feb;
+  border-bottom: 3px solid #feb;
+  border-left: 3px solid #fd3;
+}
+
+
+.checks p {
+    font-size: 18px;
+}
+
+
+
+
+/* checking.html -------------------------------*/
+.chkingbody {
+    display: flex;
+}
+
+.chking-log {
+    width: 47%;
+    margin: 0 2%;
+}
+
+.chking-log .form-wrapper, .chking-total .form-wrapper {
+    background-color: #ffd;
+    padding:0 1em 1em;
+}
+
+.chking-log tr {
+    height: 24px;
+    border-bottom: 1px solid #999;
+}
+
+.chking-total tr {
+    height: 30px;
+    border-bottom: 1px solid #999;
+}
+
+.chking-log td:nth-child(3) {
+    text-align: right;
+}
+
+
+.chking-log table {
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.chking-total table {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+.chking-total {
+    width: 47%;
+    position: fixed;
+    bottom: 0;
+    margin: 0 0 2% 2%;
+}
+
+.chking-total .form-wrapper {
+    margin: 0;
+    background-color: #fdd;
+    padding: 0 1em 0.5em;
+}
+
+
+.chking-total td:first-child{
+    text-align: left;
+}
+.chking-total td:last-child{
+    text-align: right;
+}
+.chking-total tr:last-child{
+    font-weight: bold;
+}
+
+.dsc-sel {
+    width:90%;
+    margin: 0 auto;
+}
+
+.dsc-sel select, .cfb select {
+    font-size: 18px;
+    height: 38px;
+    max-width: 170px;
+}
+
+/*
+.dsc-sel td {
+    width: 50%;
+}
+*/
+
+.cbox {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.cbox td:first-child {
+    width: 70%;
+}
+
+
+.chk-input{
+    width: 47%;
+    margin: 0 2% 0 0;
+}
+
+.chk-input .form-wrapper td {
+    width: 50%;
+}
+
+.chkform {
+    margin-bottom: 1em;
+}
+
+.chkform td {
+    height: 42px;
+}
+
+.chkform .form-item input {
+    font-size: 24px;
+    height: 38px;
+}
+
+
+.chk-input .form-wrapper {
+    padding: 1em 0 1px;
+}
+
+
+.cfb {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+.cfb td:first-child {
+    width: 70%;
+}
+*/
+
+.chk-input .form-item {
+    margin: 0;
+    width: 96%;
+    height: 38px;
+}
+
+
+.cbtn {
+    font-size: 20px;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #f88;
+}
+
+
+

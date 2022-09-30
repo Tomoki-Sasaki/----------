@@ -1,0 +1,200 @@
+<html lang="ja">
+    <head>
+        <title>個別会計</title>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+        <link rel="stylesheet" href="css/sanitize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet">
+        <script src="js/script.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+        </style>
+    </head>
+
+
+    <header>
+        <div class="top">
+            <a href="#"><div class="logo"></div></a>
+            <div class="page-title"><i class="fas fa-calculator fa-fw icon"></i>個別会計</div>
+            <div class="store">大崎古川店</div>
+            <div class="login-name">夢ポス 太郎</div>
+            <button>ログアウト</button>
+        </div>
+    </header>
+
+
+
+    <div class="chkingbody">
+        <div class="chking-log">
+            <div class="form-wrapper">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td colspan="3">注文一覧</td>
+                        </tr>
+                        <tr>
+                            <td>ビール</td>
+                            <td>2杯</td>
+                            <td>1,000円</td>
+                        </tr>
+                        <tr>
+                            <td>串盛り</td>
+                            <td>1点</td>
+                            <td>1,200円</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>           
+        </div>
+
+
+        <div class="chking-total">
+            <div class="form-wrapper">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>小計</td>
+                            <td>2,200円</td>
+                        </tr>
+                        <tr>
+                            <td>消費税</td>
+                            <td>220円</td>
+                        </tr>
+                        <tr>
+                            <td>合計</td>
+                            <td>2,420円</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+        <div class="chk-input">
+            <div class="form-wrapper">
+                <form class="chkform">
+
+                    <div class="dsc-sel">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <select>
+                                            <option>- 値引/割引選択 -</option>
+                                            <option>値引</option>
+                                            <option>割引</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select>
+                                            <option>- 選択 -</option>
+                                            <option>地域共通5,000円</option>
+                                            <option></option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="cbox">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="form-item">
+                                            <input type="number" placeholder="値引/入力" onFocus="onDsc()" id="dsc">
+                                        </div>
+                                    </td>
+                                    <td>円</td>
+                                </tr>
+ 
+                               <tr>
+                                    <td>
+                                        <div class="form-item">
+                                            <input type="number" placeholder="使用ポイント" onFocus="onPnt()" id="pnt">
+                                        </div>
+                                    </td>
+                                    <td>P</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="cfb">
+                        <table>
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <div class="form-item">
+                                            <input type="number" name="id" required="required" placeholder="支払額を入力" onFocus="onNum()" id="num">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <select>
+                                            <option>PayPay</option>
+                                            <option>クレジットカードaaaaa</option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="form-item">
+                                            <input type="number" name="id" required="required" placeholder="支払額を入力" onFocus="onNum()" id="num">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <select>
+                                            <option>現金</option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="form-item">
+                                            <input type="text" value="不足額：1,000円" readonly>
+                                        </div>
+                                    </td>
+                                    <td><button class="cbtn" type="submit" id="pay">会計</button></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </form>
+            </div>
+
+            <table class="ten">
+                <tr>
+                    <td><button class="tenKey" onclick="onTenkey('7')">7</button></td>
+                    <td><button class="tenKey" onclick="onTenkey('8')">8</button></td>
+                    <td><button class="tenKey" onclick="onTenkey('9')">9</button></td>
+                    <td><button class="tenKey" onclick="onTenkey('BS')">C</button></td>
+                </tr>
+                <tr>
+                    <td><button class="tenKey" onclick="onTenkey('4')">4</button></td>
+                    <td><button class="tenKey" onclick="onTenkey('5')">5</button></td>
+                    <td><button class="tenKey" onclick="onTenkey('6')">6</button></td>
+                    <td><button class="tenKey" onclick="onTenkey('AC')">AC</button></td>
+                </tr>
+                <tr>
+                    <td><button class="tenKey" onclick="onTenkey('1')">1</button></td>
+                    <td><button class="tenKey" onclick="onTenkey('2')">2</button></td>
+                    <td><button class="tenKey" onclick="onTenkey('3')">3</button></td>
+                    <td rowspan="2"><button class="tenKey" onclick="onTenkey('RET')">&#9166;</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="tenKey" onclick="onTenkey('0')">0</button></td>
+                    <td><button class="tenKey" onclick="onTenkey('00')">00</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</html>
