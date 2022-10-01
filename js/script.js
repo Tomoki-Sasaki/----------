@@ -54,6 +54,15 @@ function onPnt(){
     inputPlace = "pnt";
 }
 
+function onPay1(){
+    //alert( inputPlace );
+    inputPlace = "pay1";
+}
+
+function onPay2(){
+    //alert( inputPlace );
+    inputPlace = "pay2";
+}
 
 function onPass(){
     //alert( inputPlace );

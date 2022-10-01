@@ -663,11 +663,10 @@ i {
     max-width: 170px;
 }
 
-/*
-.dsc-sel td {
-    width: 50%;
+.dsc-sel table {
+    width: 100%;
 }
-*/
+
 
 .cbox {
     width: 90%;
@@ -684,8 +683,13 @@ i {
     margin: 0 2% 0 0;
 }
 
+.chk-input .form-wrapper {
+    padding: 1em 0 1px;
+}
+
 .chk-input .form-wrapper td {
     width: 50%;
+    font-size: 22px;
 }
 
 .chkform {
@@ -702,21 +706,18 @@ i {
 }
 
 
-.chk-input .form-wrapper {
-    padding: 1em 0 1px;
-}
-
-
 .cfb {
     width: 90%;
     margin: 0 auto;
 }
 
-/*
-.cfb td:first-child {
-    width: 70%;
+.cfb input[type="text"]:last-child {
+    color: red;
+    text-align: right;
+    background-color: #ddd;
+    border-bottom: solid 2px #999;
 }
-*/
+
 
 .chk-input .form-item {
     margin: 0;
@@ -733,6 +734,5 @@ i {
     font-weight: bold;
     background-color: #f88;
 }
-
 
 

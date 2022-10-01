@@ -94,6 +94,11 @@
                                             <option></option>
                                         </select>
                                     </td>
+                                    <td style="display:none">
+                                        <div>
+                                            <input type="number" style="width:50px">％
+                                        </div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -117,7 +122,7 @@
                                             <input type="number" placeholder="使用ポイント" onFocus="onPnt()" id="pnt">
                                         </div>
                                     </td>
-                                    <td>P</td>
+                                    <td>ポイント</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -130,13 +135,13 @@
                                 <tr>
                                     <td>
                                         <div class="form-item">
-                                            <input type="number" name="id" required="required" placeholder="支払額を入力" onFocus="onNum()" id="num">
+                                            <input type="number" name="id" required="required" placeholder="支払額を入力" onFocus="onPay1()" id="pay1">
                                         </div>
                                     </td>
                                     <td>
                                         <select>
                                             <option>PayPay</option>
-                                            <option>クレジットカードaaaaa</option>
+                                            <option>クレジットカード</option>
                                         </select>
                                     </td>
                                 </tr>
@@ -144,7 +149,7 @@
                                 <tr>
                                     <td>
                                         <div class="form-item">
-                                            <input type="number" name="id" required="required" placeholder="支払額を入力" onFocus="onNum()" id="num">
+                                            <input type="number" name="id" required="required" placeholder="支払額を入力" onFocus="onPay2()" id="pay2">
                                         </div>
                                     </td>
                                     <td>
@@ -157,7 +162,7 @@
                                 <tr>
                                     <td>
                                         <div class="form-item">
-                                            <input type="text" value="不足額：1,000円" readonly>
+                                            <input type="text" value="－&nbsp;18,000" readonly>
                                         </div>
                                     </td>
                                     <td><button class="cbtn" type="submit" id="pay">会計</button></td>
