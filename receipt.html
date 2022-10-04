@@ -1,0 +1,100 @@
+<html lang="ja">
+    <head>
+        <title>領収書</title>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+        <link rel="stylesheet" href="css/sanitize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+        </style>
+    </head>
+
+    <div class="r-body">
+        <table>
+            <tbody>
+                <tr>
+                    <td colspan="3"><h3>領　収　証<!--@if($again_flg) （再）@endif--></h3></td>
+                    <td></td>
+                    <td></td>
+                    <td><div class="r-no">No.286<!--{{ $receipt_no }}--></div></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <div class="r-name">
+                            <h3>様&ensp;</h3>
+                        </div>
+                    </td>
+                    <td></td>
+                    <td colspan="2">2022年12月12日<!--{{ date('Y年n月j日', strtotime($receipt_data['action_time'])) }}--></td>
+                </tr>
+                <tr>
+                    <td><h3>金額</h3></td>
+                    <td colspan="2"><h3>&yen;<!--{{ number_format($receipt_data['total']) }}-->－</h3></td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="2">
+                        <div class="dot">収入印紙</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2"><small>但</small></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2"><small>上記正に領収いたしました</small></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>store-name
+                        <!--
+                        @if($loop->first)
+                            <small>{{ $shop_info->sub_name }} {{ $shop_info->name }}</small>
+                        @elseif($loop->index === 1)
+                            <small>TEL {{ $shop_info->tel }}</small>
+                        @endif
+                        -->
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><small>内訳</small></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><small>〒{{ $shop_info->post_no }}</small></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><small>税抜金額</small></td>
+                    <td><small>&yen;<!--{{ number_format($data['tax']) }}-->－</small></td>
+                    <td></td>
+                    <td></td>
+                    <td><small>{{ $shop_info->address }}</small></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><small>消費税<!--（{{ $data['text'] . $receipt_data['select_tax'] }}%）--></small></td>
+                    <td><small>&yen;<!--{{ number_format($receipt_data['total'] - collect($receipt_data['tax'])->sum('tax')) }}-->－</small></td>
+                    <td></td>
+                    <td></td>
+                    <td><small>TEL {{ $shop_info->tel }}</small></td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</html>

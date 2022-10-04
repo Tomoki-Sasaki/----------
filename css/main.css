@@ -94,19 +94,23 @@ button {
     border-radius: 5px;
     border: solid 1px #999;
 }
-
 button:hover {
     opacity: 80%;
 }
-
 button:active {
 	box-shadow: inset -2px -2px 1px #ddd,
 				inset 2px 2px 1px #999;
 }
 
-.g-btn {
+.fbtn {
     width: 100%;
     font-size: 20px;
+}
+
+.gbtn {
+    font-size: 20px;
+    width: 80%;
+    height: 40px;
 }
 
 
@@ -598,21 +602,6 @@ i {
     padding:0 1em 1em;
 }
 
-.chking-log tr {
-    height: 24px;
-    border-bottom: 1px solid #999;
-}
-
-.chking-total tr {
-    height: 30px;
-    border-bottom: 1px solid #999;
-}
-
-.chking-log td:nth-child(3) {
-    text-align: right;
-}
-
-
 .chking-log table {
     font-size: 18px;
     text-align: center;
@@ -620,11 +609,13 @@ i {
     width: 100%;
 }
 
-.chking-total table {
-    font-size: 20px;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
+.chking-log tr {
+    height: 24px;
+    border-bottom: 1px solid #999;
+}
+
+.chking-log td:nth-child(3) {
+    text-align: right;
 }
 
 
@@ -635,12 +626,18 @@ i {
     margin: 0 0 2% 2%;
 }
 
+.chking-total table {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
 .chking-total .form-wrapper {
     margin: 0;
     background-color: #fdd;
     padding: 0 1em 0.5em;
 }
-
 
 .chking-total td:first-child{
     text-align: left;
@@ -648,9 +645,14 @@ i {
 .chking-total td:last-child{
     text-align: right;
 }
+.chking-total tr {
+    height: 30px;
+    border-bottom: 1px solid #999;
+}
 .chking-total tr:last-child{
     font-weight: bold;
 }
+
 
 .dsc-sel {
     width:90%;
@@ -735,4 +737,285 @@ i {
     background-color: #f88;
 }
 
+
+
+/* checkout.html -------------------------------*/
+.chkoutbody {
+    display: flex;
+}
+
+.chkoutbody h2 {
+    font-weight: normal;
+    margin: 0;
+    padding-top: 0.83em;
+    border-bottom: solid 1px #999;
+}
+
+.chkout-log {
+    width: 47%;
+    margin: 0 2%;
+}
+
+.chkout-log .form-wrapper, .chking-total .form-wrapper {
+    background-color: #ffd;
+    padding:0 1em 1em;
+}
+
+.chkout-log table {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.chkout-log tr {
+    height: 40px;
+    border-bottom: 1px solid #999;
+}
+
+.chkout-log td:first-child {
+    text-align: left;
+}
+.chkout-log td:last-child {
+    text-align: right;
+}
+
+
+.chkout-ctrl {
+    width: 47%;
+    position: fixed;
+    bottom: 0;
+    margin: 0 0 2% 2%;
+}
+
+.chkout-ctrl .form-wrapper {
+    margin: 0;
+    background-color: #dfc;
+    padding: .5em 1em 0.5em;
+}
+
+.chkout-ctrl table {
+    width: 100%;
+}
+
+.cobtn{
+    font-size: 20px;
+    color: #fff;
+    height: 32px;
+    width: 98%;
+    background-color: #0cc;
+    margin: 1%;
+}
+
+
+.co-input {
+    width: 47%;
+    text-align: center;
+}
+.co-input .form-wrapper {
+    padding: 1em 0 1px;
+}
+.co-form {
+    margin-bottom: 2em;
+}
+
+
+
+
+#print_area h2 {
+    margin: .2em;
+}
+
+.store-name {
+    border: 1px solid #000;
+    width: 78mm;
+    margin:0 auto;
+}
+
+.store-name p {
+    font-size: 16px;
+    text-align: center;
+    margin: .5em;
+}
+
+.store-name table {
+    font-size: 12px;
+    width: 95%;
+    margin:0 auto;
+}
+
+.t-n {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+table.item, table.chks, table.pays, .t-n {
+    width: 80mm;
+}
+
+
+#print_area td, #print_area th {
+    padding: 4px 2px;
+}
+
+table.item thead, table.item tr:last-child {
+    border-bottom: solid 1px #000;
+}
+
+table.item td:first-child {
+    text-align: left;
+}
+
+table.item td:nth-child(2) {
+    text-align: center;
+}
+table.item td:last-child {
+    text-align: right;
+}
+table.chks td:last-child {
+    text-align: right;
+}
+table.pays td:last-child {
+    text-align: right;
+}
+
+table.chks tr:last-child {
+    border-bottom: solid 1px #000;
+}
+
+
+
+
+
+/* checkout.html -------------------------------*/
+.r-body h3 {
+    font-size: 22px;
+    margin: 6px 0;
+}
+
+.r-body td {
+/*    border: solid 1px #999; */
+}
+
+.r-name {
+    border-bottom: solid 1px;
+    margin: 2px;
+    padding: 2px 4px;
+    line-height: 16px;
+}
+
+.r-no {
+    border-bottom: dotted 1px;
+    margin: 2px;
+    padding: 2px 4px;
+}
+
+.dot {
+    border: dotted 1px;
+    padding: 4px;
+    text-align: center;
+    width: 50px;
+    line-height: 24px;
+    margin: 0 auto;
+}
+
+.r-body tr:first-child td:nth-child(2) {
+    width: 16px;
+}
+
+.r-body td:last-child {
+    text-align: right;
+}
+
+.r-body tr:nth-child(2) td:first-child {
+    text-align: right;
+}
+
+.r-body tr:last-child td:first-child {
+    width: 150px;
+}
+
+.r-body tr:nth-child(n+4) td {
+    padding: 4px 0;
+}
+
+
+.r-body tr:nth-child(7) td:first-child,
+.r-body tr:nth-child(7) td:nth-child(2),
+.r-body tr:nth-child(8) td:first-child,
+.r-body tr:nth-child(8) td:nth-child(2),
+.r-body tr:nth-child(9) td:first-child,
+.r-body tr:nth-child(9) td:nth-child(2) {
+    border-bottom: solid 1px;
+}
+
+
+
+
+
+/* レシート・領収証、印刷関係 ---------------------------------*/
+
+#print_area {
+    display: none;
+}
+
+#sheet_area {
+    display: none;
+}
+#order_area {
+    display: none;
+}
+
+@media print {
+    #info_area, #menu_top_area, #main_area, #menu_under_area, #index_category {
+        display: none;
+    }
+
+    .container, body {
+        min-width: unset!important;
+        color: black;
+    }
+
+    @page sheet{
+        size: 80mm 297mm;
+        margin:0px;
+    }
+
+    #print_area{
+        page: sheet;
+        width: 80mm;
+        page-break-after:always;
+        margin-bottom : 30px;
+        display: block;
+    }
+
+    #print_area{
+        page: sheet;
+        width: unset;
+        page-break-after:always;
+        margin-left : 160mm;
+        margin-bottom : unset;
+        display: block;
+    }
+
+
+/*
+    @page receipt{
+        size: landscape;
+        margin:0px;
+    }
+
+    #r-area {
+        page: receipt;
+        page-break-after:always;
+        margin-left : 160mm;
+        margin-bottom : unset;
+        display: block;
+    }
+*/
+
+
+
+}
 

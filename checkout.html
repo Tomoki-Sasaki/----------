@@ -1,0 +1,238 @@
+<html lang="ja">
+    <head>
+        <title>会計結果</title>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+        <link rel="stylesheet" href="css/sanitize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet">
+        <script src="js/script.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+        </style>
+    </head>
+
+
+    <div id="info_area">
+
+        <header>
+            <div class="top">
+                <a href="#"><div class="logo"></div></a>
+                <div class="page-title"><i class="fas fa-calculator fa-fw icon"></i>会計結果</div>
+                <div class="store">大崎古川店</div>
+                <div class="login-name">夢ポス 太郎</div>
+                <button>ログアウト</button>
+            </div>
+        </header>
+
+
+        <div class="chkoutbody">
+            <div class="chkout-log">
+                <div class="form-wrapper">
+                    <h2>会計一覧</h2>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>小計</td>
+                                <td>20,000円</td>
+                            </tr>
+                            <tr>
+                                <td>割引(10%)</td>
+                                <td>2,000円</td>
+                            </tr>
+                            <tr>
+                                <td>消費税(内税10%)</td>
+                                <td>1,636円</td>
+                            </tr>
+                            <tr>
+                                <td>合計</td>
+                                <td>18,000円</td>
+                            </tr>
+
+                            <tr>
+                                <td>PayPayでのお支払</td>
+                                <td>15,000円</td>
+                            </tr>
+                            <tr>
+                                <td>現金お預り</td>
+                                <td>5,000円</td>
+                            </tr>
+                            <tr>
+                                <td>おつり</td>
+                                <td>260円</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>           
+            </div>
+
+
+            <div class="chkout-ctrl">
+                <div class="form-wrapper">
+                    <table>
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <a href="checks.html">
+                                        <button class="cobtn">一覧へ戻る</button>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="checking.html">
+                                        <button class="cobtn">この会計を訂正</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="cobtn">領収書発行</button>
+                                </td>
+                                <td>
+                                    <button class="cobtn" onclick="window.print();">レシート再発行</button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="co-input">
+                <div class="form-wrapper">
+                    <form class="co-form">
+
+                        <div class="form-item">
+                            <input type="number" name="id" placeholder="入力" onFocus="onNum()" id="num"></input>
+                        </div>
+
+                        <div>
+                            <button class="gbtn">汎用ボタン</button>
+                        </div>
+
+                    </form>
+                </div>
+
+
+                <table class="ten">
+                    <tr>
+                        <td><button class="tenKey" onclick="onTenkey('7')">7</button></td>
+                        <td><button class="tenKey" onclick="onTenkey('8')">8</button></td>
+                        <td><button class="tenKey" onclick="onTenkey('9')">9</button></td>
+                        <td><button class="tenKey" onclick="onTenkey('BS')">C</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="tenKey" onclick="onTenkey('4')">4</button></td>
+                        <td><button class="tenKey" onclick="onTenkey('5')">5</button></td>
+                        <td><button class="tenKey" onclick="onTenkey('6')">6</button></td>
+                        <td><button class="tenKey" onclick="onTenkey('AC')">AC</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="tenKey" onclick="onTenkey('1')">1</button></td>
+                        <td><button class="tenKey" onclick="onTenkey('2')">2</button></td>
+                        <td><button class="tenKey" onclick="onTenkey('3')">3</button></td>
+                        <td rowspan="2"><button class="tenKey" onclick="onTenkey('RET')">&#9166;</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button class="tenKey" onclick="onTenkey('0')">0</button></td>
+                        <td><button class="tenKey" onclick="onTenkey('00')">00</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="print_area">
+        <div class="container">
+            <div class="store-name">
+                <p>ショルダーネーム</p>
+                <h2>店舗名</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>住所</td>
+                            <td>大崎市古川駅前大通１丁目４−４３<br>よしだビル3F</td>
+                        </tr>
+                        <tr>
+                            <td>電話</td>
+                            <td>0229-25-3138</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <dev class="t-n">
+                <dev class="txt-l">2022/11/22 19:58:46</dev>
+                <dev class="txt-r">No.000000489</dev>
+            </dev>
+            <table class="item">
+                <thead>
+                    <tr>
+                        <th>品名</th>
+                        <th>数量</th>
+                        <th>金額</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>デラックスバリューコース#</td>
+                        <td>4</td>
+                        <td>\12,000</td>
+                    </tr>
+                    <tr>
+                        <td>飲み放題（コース・90分）#</td>
+                        <td>4</td>
+                        <td>\8,000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="chks">
+                <tbody>
+                    <tr>
+                        <td>小計</td>
+                        <td>\20,000</td>
+                    </tr>
+                    <tr>
+                        <td>割引(10%)</td>
+                        <td>\2,000</td>
+                    </tr>
+                    <tr>
+                        <td>消費税(内税10%)</td>
+                        <td>\1,636</td>
+                    </tr>
+                    <tr>
+                        <td>合計</td>
+                        <td>\18,000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="pays">
+                <tbody>
+                    <tr>
+                        <td>PayPayでのお支払</td>
+                        <td>\15,000</td>
+                    </tr>
+                    <tr>
+                        <td>現金お預り</td>
+                        <td>\5,000</td>
+                    </tr>
+                    <tr>
+                        <td>おつり</td>
+                        <td>\260</td>
+                    </tr>
+                    <tr>
+                        <td>#は内税対象商品</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</html>
