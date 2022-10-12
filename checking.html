@@ -12,18 +12,19 @@
         </style>
     </head>
 
-
     <header>
         <div class="top">
-            <a href="#"><div class="logo"></div></a>
-            <div class="page-title"><i class="fas fa-calculator fa-fw icon"></i>個別会計</div>
-            <div class="store">大崎古川店</div>
-            <div class="login-name">夢ポス 太郎</div>
-            <button>ログアウト</button>
+            <a href="index.html"><div class="logo"></div></a>
+            <div class="page-title"><i class="fas fa-th-list fa-fw icon"></i>トップメニュー</div>
+            <div class="top-data">
+                <div class="time_stts">2022/10/20　4組10名様 来店中</div>
+                <span class="store">大崎古川店</span>
+                <span class="login-name">夢ポス 太郎</span>
+            </div>
         </div>
     </header>
 
-
+    <div class="err-area">エラーメッセージが表示されます<br>エラーメッセージ２</div>
 
     <div class="chkingbody">
         <div class="chking-log">
@@ -31,17 +32,20 @@
                 <table>
                     <tbody>
                         <tr>
-                            <td colspan="3">注文一覧</td>
+                            <td colspan="2">注文一覧</td>
+                            <td colspan="2"><button onclick="location.href='add.html'">商品追加</button></td>
                         </tr>
                         <tr>
                             <td>ビール</td>
                             <td>2杯</td>
                             <td>1,000円</td>
+                            <td><button>削除</button></td>
                         </tr>
                         <tr>
-                            <td>串盛り</td>
+                            <td>シーザーサラダ</td>
                             <td>1点</td>
                             <td>1,200円</td>
+                            <td><button>削除</button></td>
                         </tr>
                     </tbody>
                 </table>
@@ -69,7 +73,6 @@
                 </table>
             </div>
         </div>
-
 
 
         <div class="chk-input">
@@ -110,20 +113,16 @@
                                 <tr>
                                     <td>
                                         <div class="form-item">
-                                            <input type="number" placeholder="値引/入力" onFocus="onDsc()" id="dsc">
+                                            <input type="number" placeholder="値引入力" onFocus="onDsc()" id="dsc">円
                                         </div>
                                     </td>
-                                    <td>円</td>
-                                </tr>
- 
-                               <tr>
                                     <td>
                                         <div class="form-item">
-                                            <input type="number" placeholder="使用ポイント" onFocus="onPnt()" id="pnt">
+                                            <input type="number" placeholder="使用ポイント" onFocus="onPnt()" id="pnt">P
                                         </div>
                                     </td>
-                                    <td>ポイント</td>
                                 </tr>
+ 
                             </tbody>
                         </table>
                     </div>
@@ -140,7 +139,21 @@
                                     </td>
                                     <td>
                                         <select>
-                                            <option>PayPay</option>
+                                            <option>商品券(釣銭あり)</option>
+                                            <option>商品券(釣銭なし)</option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="form-item">
+                                            <input type="number" name="id" required="required" placeholder="支払額を入力" onFocus="onPay1()" id="pay1">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <select>
+                                            <option>電子決済</option>
                                             <option>クレジットカード</option>
                                         </select>
                                     </td>
@@ -165,7 +178,7 @@
                                             <input type="text" value="－&nbsp;18,000" readonly>
                                         </div>
                                     </td>
-                                    <td><button class="cbtn" type="submit" id="pay">会計</button></td>
+                                    <td><button class="cbtn" type="submit" id="pay" onclick="location.href='checkout.html'">会計</button></td>
                                 </tr>
 
                             </tbody>
@@ -201,5 +214,9 @@
             </table>
         </div>
     </div>
+
+    <footer>
+        <div>© 夢工房</div>
+    </footer>
 
 </html>

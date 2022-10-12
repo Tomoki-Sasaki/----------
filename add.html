@@ -1,6 +1,6 @@
 <html lang="ja">
     <head>
-        <title>支払い</title>
+        <title>商品追加</title>
         <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
         <link rel="stylesheet" href="css/sanitize.css">
@@ -26,23 +26,21 @@
 
     <div class="err-area">エラーメッセージが表示されます<br>エラーメッセージ２</div>
 
-    <div class="paybody">
-        <div class="pay-log">
+    <div class="addbody">
+        <div class="add-item">
             <div class="form-wrapper">
                 <table>
                     <tbody>
                         <tr>
-                            <td colspan="3">支払い履歴</td>
+                            <td colspan="2">商品一覧</td>
                         </tr>
                         <tr>
-                            <td>食品</td>
-                            <td>50,000円</td>
-                            <td><button class="fbtn">修正</button></td>
+                            <td>テイクアウト商品１</td>
+                            <td><input type="number"></td>
                         </tr>
                         <tr>
-                            <td>人件費</td>
-                            <td>20,000円</td>
-                            <td><button class="fbtn">修正</button></td>
+                            <td>レジ横商品１</td>
+                            <td><input type="number"></td>
                         </tr>
 
                     </tbody>
@@ -50,61 +48,62 @@
             </div>           
         </div>
 
-        <div class="pay-input">
+
+        <div class="add-input">
             <div class="form-wrapper">
-                <form class="payform">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>カテゴリ1</td>
+                            <td>
+                                <select>
+                                    <option>フード</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>カテゴリ2</td>
+                            <td>
+                                <select>
+                                    <option>肉</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>カテゴリ3</td>
+                            <td>
+                                <select>
+                                    <option>とり</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>カテゴリ4</td>
+                            <td>
+                                <select>
+                                    <option>串</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>カテゴリ5</td>
+                            <td>
+                                <select>
+                                    <option>タレ</option>
+                                </select>
+                            </td>
+                        </tr>
 
-                    <p>レジ内金額&emsp;88,888円</p>
+                    </tbody>
+                </table>
 
-                    <div class="paysel">
-                        <select class="form-control" id="selchg" onchange="viewChange();">
-                            <option>雑費</option>
-                            <option>食品</option>
-                            <option>飲料</option>
-                            <option>家賃</option>
-                            <option>光熱費</option>
-                            <option value="stf">人件費</option>
-                        </select>
+                <button class="gbtn">商品を表示</button>
 
-                        <select class="tax" id="tax" onchange="viewChange2()">
-                            <option>内税</option>
-                            <option>外税</option>
-                            <option value="tax-exempt">非課税</option>
-                        </select>
+                <div class="addbtn">
+                    <button class="gbtn" onclick="location.href='checking.html'">戻る</button>
+                    <button class="gbtn" onclick="location.href='checking.html'">商品を追加</button>
+                </div>
 
-                        <select class="taxvol" id="taxvol">
-                            <option>8%</option>
-                            <option>10%</option>
-                        </select>
-
-                        <select class="staff" id="staff" style="display:none">
-                            <option>夢工房 太郎</option>
-                            <option>山田 一郎</option>
-                        </select>
-                    </div>
-
-                    <div class="pfb">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="form-item">
-                                            <input type="number" name="id" required="required" placeholder="支払額を入力" onFocus="onNum()" id="num"></input>
-                                        </div>
-                                    </td>
-                                    <td rowspan="2"><button class="pbtn" type="submit" id="pay">支払う</button></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="form-box">
-                                        100＋10(内税10%)
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </form>
             </div>
 
             <table class="ten">
@@ -131,11 +130,15 @@
                     <td><button class="tenKey" onclick="onTenkey('00')">00</button></td>
                 </tr>
             </table>
-       </div>
+        </div>
     </div>
 
     <footer>
-        <div>© 夢工房</div>
+        <div class="footer-inner">
+            <button class="" onclick="locate.href='login.html'">ログアウト</button>
+            <div>© 夢工房</div>
+            <button class="" onclick="locate.href='index.html'">トップへ</button>
+        </div>
     </footer>
 
 </html>

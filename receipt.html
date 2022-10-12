@@ -34,7 +34,7 @@
                     <td colspan="2"><h3>&yen;<!--{{ number_format($receipt_data['total']) }}-->－</h3></td>
                     <td></td>
                     <td></td>
-                    <td rowspan="2">
+                    <td rowspan="3">
                         <div class="dot">収入印紙</div>
                     </td>
                 </tr>
@@ -47,7 +47,6 @@
                 <tr>
                     <td></td>
                     <td colspan="2"><small>上記正に領収いたしました</small></td>
-                    <td></td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -85,13 +84,23 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td><small>消費税<!--（{{ $data['text'] . $receipt_data['select_tax'] }}%）--></small></td>
+                    <td><small>消費税（8%）<!--（{{ $data['text'] . $receipt_data['select_tax'] }}%）--></small></td>
                     <td><small>&yen;<!--{{ number_format($receipt_data['total'] - collect($receipt_data['tax'])->sum('tax')) }}-->－</small></td>
                     <td></td>
                     <td></td>
                     <td><small>TEL {{ $shop_info->tel }}</small></td>
                     <td></td>
                 </tr>
+                <tr>
+                    <td><small>消費税（10%）<!--（{{ $data['text'] . $receipt_data['select_tax'] }}%）--></small></td>
+                    <td><small>&yen;<!--{{ number_format($receipt_data['total'] - collect($receipt_data['tax'])->sum('tax')) }}-->－</small></td>
+                    <td></td>
+                    <td></td>
+                    <td><small>登録番号 T1234567890123</small></td>
+                    <td></td>
+                </tr>
+
+
 
             </tbody>
         </table>

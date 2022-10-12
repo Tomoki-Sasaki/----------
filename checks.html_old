@@ -1,0 +1,74 @@
+
+<html lang="ja">
+    <head>
+        <title>未会計一覧</title>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+        <link rel="stylesheet" href="css/sanitize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+        </style>
+    </head>
+
+    <header>
+        <div class="top">
+            <a href="index.html"><div class="logo"></div></a>
+            <div class="page-title"><i class="fas fa-calculator fa-fw icon"></i>未会計一覧</div>
+            <div class="store">大崎古川店</div>
+            <div class="login-name">夢ポス 太郎</div>
+            <button>ログアウト</button>
+        </div>
+    </header>
+
+    <div class="err-area">エラーメッセージが表示されます<br>エラーメッセージ２</div>
+
+    <body class="checks">
+
+        <table>
+            <tbody>
+                <tr>
+                    <td><div class="chkbtn"><a href="#"><p>A席&ensp;12名</p><p>19:20～&ensp;男2:女10</p></a></div></td>
+                    <td><div class="chkbtn"><a href="#"><p>B席&ensp;20名</p><p>18:40～&ensp;男10:女10</p></a></div></td>
+                    <td><div class="chkbtn"><a href="#"><p>C席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                    <td><div class="chkbtn"><a href="#"><p>D席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                </tr>
+                <tr>
+                    <td><div class="chkbtn"><a href="#"><p>E席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                    <td><div class="chkbtn"><a href="#"><p>F席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                    <td><div class="chkbtn"><a href="#"><p>G席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                    <td><div class="chkbtn"><a href="#"><p>H席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                </tr>
+                <tr>
+                    <td><div class="chkbtn"><a href="#"><p>I席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                    <td><div class="chkbtn"><a href="#"><p>J席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                    <td><div class="chkbtn"><a href="#"><p>K席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                    <td><div class="chkbtn"><a href="#"><p>L席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                </tr>
+                <tr>
+                    <td><div class="chkbtn"><a href="#"><p>M席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                    <td><div class="chkbtn"><a href="#"><p>N席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                    <td><div class="chkbtn"><a href="#"><p>O席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                    <td><div class="chkbtn"><a href="#"><p>P席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                </tr>
+                <tr>
+                    <td><div class="chkbtn"><a href="#"><p>Q席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                    <td><div class="chkbtn"><a href="#"><p>R席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                    <td><div class="chkbtn"><a href="#"><p>S席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                    <td><div class="chkbtn"><a href="#"><p>T席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                </tr>
+                <tr>
+                    <td><div class="chkbtn"><a href="#"><p>U席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                    <td><div class="chkbtn"><a href="#"><p>V席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                    <td><div class="chkbtn"><a href="#"><p>W席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                    <td><div class="chkbtn"><a href="#"><p>X席&ensp;名</p><p>～&ensp;男:女</p></a></div></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </body>
+
+
+</html>
