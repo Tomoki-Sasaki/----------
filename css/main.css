@@ -23,6 +23,13 @@ p {
     align-items: center;
 }
 
+.top-data {
+    font-size: 14px;
+    text-align: right;
+    line-height: 16px;
+}
+
+
 .logo {
     background: url(../img/logo2.png) no-repeat;
     height: 44px;
@@ -35,17 +42,43 @@ p {
     font-weight: bold;
 }
 
+.err-area {
+    background-color: #fcc;
+    color: red;
+    width: 60%;
+    height: 6%;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: none;
+}
+
+
+
+
+
 
 footer {
     position: absolute;
-    height: 50px;
+    height: 5%;
     width: 100%;
     bottom: 0;
     background-color: #ddd;
-    text-align: left;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
 
 .topbtn, .botbtn {
     height: 30px;
@@ -75,13 +108,6 @@ input[type="number"] {
   -moz-appearance:textfield; 
 } 
 
-
-/*
-.regibody{
-    width: 60%;
-    margin: 0 auto;
-}
-*/
 
 .form-wrapper {
     background: #ddd;
@@ -116,11 +142,11 @@ button:active {
 
 .ten {
     width: 47%;
-    height: 40%;
+    height: 35%;
     position: fixed;
     bottom: 0;
-    /* margin-bottom: 2%; */
-    margin: 0 2% 2% 0;
+    margin: 0 2% 5% 0;
+    display: none;
 }
 
 .ten tr {
@@ -144,7 +170,7 @@ button:active {
 .index table {
     width: 96%;
     height: 80%;
-    margin: 5% auto;
+    margin: 2% auto;
 }
 
 .index table, .index td {
@@ -154,13 +180,13 @@ button:active {
 }
 
 .index tr {
-    height: 40%;
+    height: 20%;
 }
-
+/*
 .index tr:first-child {
     height: 20%;
 }
-
+*/
 .index td {
 	padding: 0px;
 	width: 0;
@@ -189,10 +215,12 @@ button:active {
     margin: 0 auto;
     color: #fff;
     font-size: 30px;
+    /*
     border-top: 4px solid #48ecc4;
     border-right: 4px solid #0a5f4a;
     border-bottom: 4px solid #0f745b;
     border-left: 4px solid #8cf9de;
+    */
     border-radius: 4px;
     background-color: #11a37f;
     font-weight: bold;
@@ -200,11 +228,49 @@ button:active {
 }
 
 .menubtn :active {
+  border-top: 4px solid #666;
+  border-right: 4px solid #ccc;
+  border-bottom: 4px solid #ccc;
+  border-left: 4px solid #666;
+}
+
+#exc a {
+    background-color: #0af;
+}
+#tenken a {
+    background-color: #05f;
+}
+#seisan a {
+    background-color: #50f;
+}
+#fix a {
+    background-color: #f0f;
+}
+#manage a {
+    background-color: #f05;
+}
+
+#in a {
+    background-color: #fa0;
+}
+#out a {
+    background-color: #f50;
+}
+#kaikei a {
+    background-color: #f44;
+}
+
+
+/*
+.menubtn :active {
   border-top: 4px solid #0f745b;
   border-right: 4px solid #8cf9de;
   border-bottom: 4px solid #48ecc4;
   border-left: 4px solid #0a5f4a;
 }
+*/
+
+
 
 i {
     margin-right: 4px;
@@ -344,11 +410,6 @@ i {
     text-align: center;
 }
 
-.pay-input{
-    width: 47%;
-    margin: 0 2% 0 0;
-}
-
 .pay-log {
     width: 47%;
     margin: 0 2%;
@@ -371,8 +432,20 @@ i {
     padding-bottom: 1em;
 }
 
+
+.pay-input{
+    width: 47%;
+    margin: 0 2% 0 0;
+}
+
 .pay-input .form-wrapper {
     padding: 1em 0 0;
+}
+
+.pay-input .form-item {
+    margin: 0;
+    width: 96%;
+    height: 50px;
 }
 
 
@@ -397,11 +470,6 @@ i {
     width: 70%;
 }
 
-.pay-input .form-item {
-    margin: 0;
-    width: 96%;
-    height: 50px;
-}
 
 .form-box {
     background: #fafafa;
@@ -529,59 +597,28 @@ i {
 
 
 /* checks.html -------------------------------*/
-.checks table {
-    width: 96%;
-    height: 86%;
-    margin: 2% auto;
-}
-
-.checks td {
-    /* border-bottom: solid 1px; */
-	border-collapse: collapse;
-}
-
-.checks tr {
-    height: calc(100%/6);
-}
-
-.checks td {
-    text-align: right;
-    width: 25%;
-}
-
-
-.chkbtn {
-    height: 100%;
-    width: 100%;
+.flexbox {
+    flex-wrap: wrap;
     display: flex;
-    margin: 0 auto;
-    padding: 2% 1%;
+    justify-content: flex-start;
 }
 
-.chkbtn a{
-    width: 100%;
-    padding: 5px;
-    color: #333;
-    font-size: 20px;
-    border-top: 3px solid #feb;
-    border-right: 3px solid #fd3;
-    border-bottom: 3px solid #fb3;
-    border-left: 3px solid #feb;
-    border-radius: 4px;
-    background-color: #ffc;
+.flexbox .box1 {
     text-decoration: none;
+    color: #000;
+    background-color: #9f9;
+    width: 23%;
+    padding: 6px;
+    margin: 1%;
 }
 
-.chkbtn :active {
-  border-top: 3px solid #fb3;
-  border-right: 3px solid #feb;
-  border-bottom: 3px solid #feb;
-  border-left: 3px solid #fd3;
-}
-
-
-.checks p {
-    font-size: 18px;
+.flexbox .box2 {
+    text-decoration: none;
+    color: #000;
+    background-color: #f99;
+    width: 23%;
+    padding: 6px;
+    margin: 1%;
 }
 
 
@@ -597,9 +634,11 @@ i {
     margin: 0 2%;
 }
 
-.chking-log .form-wrapper, .chking-total .form-wrapper {
+.chking-log .form-wrapper {
     background-color: #ffd;
     padding:0 1em 1em;
+    max-height: 80%;
+    overflow: auto;
 }
 
 .chking-log table {
@@ -614,7 +653,7 @@ i {
     border-bottom: 1px solid #999;
 }
 
-.chking-log td:nth-child(3) {
+.chking-log td:last-child {
     text-align: right;
 }
 
@@ -623,7 +662,7 @@ i {
     width: 47%;
     position: fixed;
     bottom: 0;
-    margin: 0 0 2% 2%;
+    margin: 0 0 5% 2%;
 }
 
 .chking-total table {
@@ -635,7 +674,7 @@ i {
 
 .chking-total .form-wrapper {
     margin: 0;
-    background-color: #fdd;
+    background-color: #dfc;
     padding: 0 1em 0.5em;
 }
 
@@ -662,7 +701,7 @@ i {
 .dsc-sel select, .cfb select {
     font-size: 18px;
     height: 38px;
-    max-width: 170px;
+    width: 98%;
 }
 
 .dsc-sel table {
@@ -679,6 +718,14 @@ i {
     width: 70%;
 }
 
+.cbox .form-item {
+    display: flex;
+    align-items: center;
+}
+
+.cbox .form-item input {
+    margin-right: 4px;
+}
 
 .chk-input{
     width: 47%;
@@ -756,7 +803,7 @@ i {
     margin: 0 2%;
 }
 
-.chkout-log .form-wrapper, .chking-total .form-wrapper {
+.chkout-log .form-wrapper {
     background-color: #ffd;
     padding:0 1em 1em;
 }
@@ -785,7 +832,7 @@ i {
     width: 47%;
     position: fixed;
     bottom: 0;
-    margin: 0 0 2% 2%;
+    margin: 0 0 5% 2%;
 }
 
 .chkout-ctrl .form-wrapper {
@@ -887,6 +934,100 @@ table.chks tr:last-child {
 
 
 
+/* add.html -------------------------------*/
+.addbody {
+    display: flex;
+}
+
+.add-item {
+    width: 47%;
+    margin: 0 2%;
+}
+
+.add-item tr {
+    height: 34px;
+    border-bottom: 1px solid #999;
+}
+
+.add-item table {
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.add-item .form-wrapper {
+    background-color: #cff;
+    padding-bottom: 1em;
+}
+
+.add-item input[type="number"] {
+    width: 2em;
+    font-size: 18px;
+}
+
+
+.add-input {
+    width: 47%;
+    margin: 0 2% 0 0;
+}
+
+.add-input .form-wrapper {
+    padding: 1em 0 1em;
+    text-align: center;
+}
+
+.add-input .form-item {
+    margin: 0;
+    width: 96%;
+    height: 50px;
+}
+
+.add-input select {
+    font-size: 20px;
+    width: 8em;
+    height: 30px;
+}
+
+.add-input table {
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.add-input tr {
+    height: 30px;
+}
+
+
+.add-input .gbtn {
+    height: 40px;
+    margin-top: 14px;
+}
+
+.add-input .gbtn:last-child {
+    background-color: #16f;
+    color: #fff;
+}
+
+.add-input .form-wrapper table {
+    width: 80%;
+}
+
+.addbtn {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.addbtn .gbtn {
+    width: 48%;
+}
+
+
+
+
+
 
 /* checkout.html -------------------------------*/
 .r-body h3 {
@@ -918,6 +1059,7 @@ table.chks tr:last-child {
     width: 50px;
     line-height: 24px;
     margin: 0 auto;
+    vertical-align: top;
 }
 
 .r-body tr:first-child td:nth-child(2) {
@@ -937,7 +1079,7 @@ table.chks tr:last-child {
 }
 
 .r-body tr:nth-child(n+4) td {
-    padding: 4px 0;
+    padding: 2px 0;
 }
 
 
@@ -946,16 +1088,16 @@ table.chks tr:last-child {
 .r-body tr:nth-child(8) td:first-child,
 .r-body tr:nth-child(8) td:nth-child(2),
 .r-body tr:nth-child(9) td:first-child,
-.r-body tr:nth-child(9) td:nth-child(2) {
+.r-body tr:nth-child(9) td:nth-child(2),
+.r-body tr:last-child td:first-child,
+.r-body tr:last-child td:nth-child(2) {
     border-bottom: solid 1px;
 }
 
 
 
 
-
 /* レシート・領収証、印刷関係 ---------------------------------*/
-
 #print_area {
     display: none;
 }
@@ -990,6 +1132,7 @@ table.chks tr:last-child {
         display: block;
     }
 
+/*
     #print_area{
         page: sheet;
         width: unset;
@@ -998,7 +1141,7 @@ table.chks tr:last-child {
         margin-bottom : unset;
         display: block;
     }
-
+*/
 
 /*
     @page receipt{
@@ -1018,4 +1161,3 @@ table.chks tr:last-child {
 
 
 }
-
