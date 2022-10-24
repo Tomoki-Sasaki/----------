@@ -14,20 +14,20 @@
 
     <header>
         <div class="top">
-            <a href="index.html"><div class="logo"></div></a>
-            <div class="page-title"><i class="fas fa-th-list fa-fw icon"></i>トップメニュー</div>
-            <div class="top-data">
-                <div class="time_stts">2022/10/20　4組10名様 来店中</div>
-                <span class="store">大崎古川店</span>
-                <span class="login-name">夢ポス 太郎</span>
+            <div class="top-inner">
+                <a href="index.html"><div class="logo"></div></a>
+                <div class="top-data">
+                    <div class="time_stts">2022/10/20　4組10名様 来店中</div>
+                    <span class="store">大崎古川店</span>
+                    <span class="login-name">夢ポス 太郎</span>
+                </div>
             </div>
         </div>
 
         <div class="top-under">
-            <a href="index.html">トップへ戻る</a>
-            <button onclick="location.href='login.html'">ログアウト</button>
+            <div class="page-title"><i class="fas fa-th-list fa-fw icon"></i>トップメニュー</div>
+            <div></div>
         </div>
-
     </header>
 
     <div class="err-area">エラーメッセージが表示されます<br>エラーメッセージ２</div>
@@ -36,26 +36,23 @@
         <table>
             <tbody>
                 <tr>
-                    <td><div class="menubtn"><a href="#"><i class="fas fa-store-alt fa-fw icon"></i>開店/閉店</a></div></td>
+                    <td><div class="menubtn"><a href="#"><i class="fas fa-store-alt fa-fw icon"></i>開/閉店</a></div></td>
                     <td><div class="menubtn" id="exc"><a href="#"><i class="fas fa-inbox fa-fw icon"></i>両替</a></div></td>
-                    <td rowspan="2"><div class="menubtn" id="in"><a href="deposit.html"><i class="fas fa-sign-in-alt fa-fw icon"></i>入金</a></div></td>
-                    <td rowspan="2"><div class="menubtn" id="out"><a href="payment.html"><i class="fas fa-sign-out-alt fa-fw icon"></i>支払い</a></div></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><div class="menubtn" id="tenken"><a href="inspection.html"><i class="fas fa-reply fa-fw icon"></i>点検</a></div></td>
-                    <!--
-                    <td colspan="2"><div class="menubtn"><a href="checks.html"><i class="fas fa-th-large fa-fw icon"></i>未会計一覧</a></div></td>
-                    -->
-                </tr>
-                <tr>
-                    <td colspan="2"><div class="menubtn" id="seisan"><a href="close.html"><i class="fas fa-reply-all fa-fw icon"></i>清算</a></div></td>
                     <td colspan="2" rowspan="3"><div class="menubtn" id="kaikei"><a href="checks.html"><i class="fas fa-calculator fa-fw icon"></i>会計</a></div></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><div class="menubtn" id="fix"><a href="close-fix.html"><i class="fas fa-undo fa-fw icon"></i>精算修正</a></div></td>
+                    <td><div class="menubtn" id="tenken"><a href="inspection.html"><i class="fas fa-reply fa-fw icon"></i>点検</a></div></td>
+                    <td><div class="menubtn" id="seisan"><a href="close.html"><i class="fas fa-reply-all fa-fw icon"></i>清算</a></div></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><div class="menubtn" id="manage"><a href="close.html"><i class="fas fa-laptop fa-fw icon"></i>管理画面</a></div></td>
+                    <td><div class="menubtn" id="manage"><a href="close.html"><i class="fas fa-laptop fa-fw icon"></i>管理</a></div></td>
+                    <td><div class="menubtn" id="fix"><a href="close-fix.html"><i class="fas fa-undo fa-fw icon"></i>修正</a></div></td>
+                </tr>
+                <tr>
+                    <td><div class="menubtn" id="in"><a href="deposit.html"><i class="fas fa-sign-in-alt fa-fw icon"></i>入金</a></div></td>
+                    <td><div class="menubtn" id="out"><a href="payment.html"><i class="fas fa-sign-out-alt fa-fw icon"></i>支払</a></div></td>
+                    <td></td> 
+                    <td></td> 
                 </tr>
             </tbody>
         </table>
@@ -63,10 +60,9 @@
 
     <footer>
         <div class="footer-inner">
-            <button class="" onclick="locate.href='login.html'">ログアウト</button>
             <div>© 夢工房</div>
-            <button class="" onclick="locate.href='index.html'">トップへ</button>
         </div>
+        <button onclick="location.href='login.html'">ログアウト</button>
     </footer>
 
 </html>

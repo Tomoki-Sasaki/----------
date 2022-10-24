@@ -17,24 +17,29 @@ p {
 
 .top {
     background-color: #ddd;
-    display:flex;
     height: 6%;
-    justify-content: space-around;
+}
+
+.top-inner {
+    height: 100%;
+    width: 94%;
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-between; 
     align-items: center;
 }
-
-.top-data {
-    font-size: 14px;
-    text-align: right;
-    line-height: 16px;
-}
-
 
 .logo {
     background: url(../img/logo2.png) no-repeat;
     height: 44px;
     width: 92px;
     margin-top :5px;
+}
+
+.top-data {
+    font-size: 14px;
+    text-align: right;
+    line-height: 16px;
 }
 
 .page-title {
@@ -45,21 +50,23 @@ p {
 .err-area {
     background-color: #fcc;
     color: red;
-    width: 60%;
+    width: 55%;
     height: 6%;
     font-size: 14px;
     line-height: 18px;
     padding: 0 6px;
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translate(-50%, 0%);
+    left: 15%;
     display: none;
 }
 
-
-
-
+.top-under {
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1% auto 0;
+}
 
 
 footer {
@@ -73,10 +80,9 @@ footer {
     align-items: center;
 }
 
-.footer-inner {
-    display: flex;
-    justify-content: space-between;
-    width: 95%;
+footer button {
+    position: absolute;
+    right: 3%;
 }
 
 
@@ -101,11 +107,11 @@ h3 {
 /* 数値入力のスピンボタンを削除 */
 input[type="number"]::-webkit-outer-spin-button, 
 input[type="number"]::-webkit-inner-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+    -webkit-appearance: none; 
+    margin: 0; 
 } 
 input[type="number"] { 
-  -moz-appearance:textfield; 
+    -moz-appearance:textfield; 
 } 
 
 
@@ -170,7 +176,7 @@ button:active {
 .index table {
     width: 96%;
     height: 80%;
-    margin: 2% auto;
+    margin: 0 auto;
 }
 
 .index table, .index td {
@@ -189,7 +195,7 @@ button:active {
 */
 .index td {
 	padding: 0px;
-	width: 0;
+	width: calc(100%/3);
 }
 
 .cat {
@@ -215,12 +221,6 @@ button:active {
     margin: 0 auto;
     color: #fff;
     font-size: 30px;
-    /*
-    border-top: 4px solid #48ecc4;
-    border-right: 4px solid #0a5f4a;
-    border-bottom: 4px solid #0f745b;
-    border-left: 4px solid #8cf9de;
-    */
     border-radius: 4px;
     background-color: #11a37f;
     font-weight: bold;
@@ -228,10 +228,10 @@ button:active {
 }
 
 .menubtn :active {
-  border-top: 4px solid #666;
-  border-right: 4px solid #ccc;
-  border-bottom: 4px solid #ccc;
-  border-left: 4px solid #666;
+  border-top: 3px solid #666;
+  border-right: 3px solid #ccc;
+  border-bottom: 3px solid #ccc;
+  border-left: 3px solid #666;
 }
 
 #exc a {
@@ -256,6 +256,7 @@ button:active {
 #out a {
     background-color: #f50;
 }
+
 #kaikei a {
     background-color: #f44;
 }
