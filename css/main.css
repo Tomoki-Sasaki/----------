@@ -30,10 +30,10 @@ p {
 }
 
 .logo {
-    background: url(../img/logo2.png) no-repeat;
-    height: 44px;
-    width: 92px;
-    margin-top :5px;
+    background: url(../img/yumepos_logo1.png) no-repeat;
+    height: 36px;
+    width: 66px;
+	background-size: cover;
 }
 
 .top-data {
@@ -66,6 +66,10 @@ p {
     display: flex;
     justify-content: space-between;
     margin: 1% auto 0;
+}
+
+.top-under button {
+    width: 100px;
 }
 
 
@@ -143,6 +147,15 @@ button:active {
     font-size: 20px;
     width: 80%;
     height: 40px;
+}
+
+button.totop {
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    height: 26px;
+    border: none;
 }
 
 
@@ -228,10 +241,10 @@ button:active {
 }
 
 .menubtn :active {
-  border-top: 3px solid #666;
-  border-right: 3px solid #ccc;
-  border-bottom: 3px solid #ccc;
-  border-left: 3px solid #666;
+    border-top: 3px solid #666;
+    border-right: 3px solid #ccc;
+    border-bottom: 3px solid #ccc;
+    border-left: 3px solid #666;
 }
 
 #exc a {
@@ -287,6 +300,14 @@ i {
     margin: 0 auto;
 }
 
+.loginlogo{
+	background: url(../img/yumepos_logo1.png) no-repeat;
+	width: 370px;
+	height: 200px;
+	margin: 20px auto 0;
+	background-size: cover;
+}
+
 .loginform {
 	padding: 1em 0 2em;
 	margin-bottom: 0;
@@ -337,6 +358,17 @@ i {
     margin: unset;
 }
 
+
+.login-err-area {
+    background-color: #fcc;
+    color: red;
+    padding: 0 6px;
+    display: none;
+}
+
+.login-err-area p {
+    font-size: 18px;
+}
 
 
 
@@ -786,6 +818,11 @@ i {
 }
 
 
+select.p-num-sel {
+    width: 50px;
+}
+
+
 
 /* checkout.html -------------------------------*/
 .chkoutbody {
@@ -869,7 +906,6 @@ i {
 
 
 
-
 #print_area h2 {
     margin: .2em;
 }
@@ -891,6 +927,9 @@ i {
     width: 95%;
     margin:0 auto;
 }
+
+
+
 
 .t-n {
     display: flex;
@@ -935,6 +974,30 @@ table.chks tr:last-child {
 
 
 
+/* chit.html -------------------------------*/
+table.chit {
+    width: 80mm;
+    margin-top: 10px;
+}
+
+table.chit tr {
+    border-top: dashed 1px #000;
+    height: 40px;
+}
+
+table.chit td {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.chit-t {
+    width: 80mm;
+    text-align: right;
+}
+
+
+
+
 /* add.html -------------------------------*/
 .addbody {
     display: flex;
@@ -967,7 +1030,6 @@ table.chks tr:last-child {
     font-size: 18px;
 }
 
-
 .add-input {
     width: 47%;
     margin: 0 2% 0 0;
@@ -999,7 +1061,6 @@ table.chks tr:last-child {
     height: 30px;
 }
 
-
 .add-input .gbtn {
     height: 40px;
     margin-top: 14px;
@@ -1024,8 +1085,6 @@ table.chks tr:last-child {
 .addbtn .gbtn {
     width: 48%;
 }
-
-
 
 
 
@@ -1111,7 +1170,7 @@ table.chks tr:last-child {
 }
 
 @media print {
-    #info_area, #menu_top_area, #main_area, #menu_under_area, #index_category {
+    #info_area, #menu_top_area, #main_area, #menu_under_area, #index_category, footer {
         display: none;
     }
 
