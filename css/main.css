@@ -159,6 +159,22 @@ button.totop {
 }
 
 
+.clr {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.clrbtn {
+    font-size: 20px;
+    width: 70%;
+    height: 50px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #999;
+}
+
+
 .ten {
     width: 47%;
     height: 35%;
@@ -262,7 +278,6 @@ button.totop {
 #manage a {
     background-color: #f05;
 }
-
 #in a {
     background-color: #fa0;
 }
@@ -272,6 +287,15 @@ button.totop {
 
 #kaikei a {
     background-color: #f44;
+}
+
+#exc0 a,
+#kaikei0 a,
+#in0 a,
+#out0 a,
+#tenken0 a,
+#seisan0 a {
+    background-color: #999;
 }
 
 
@@ -284,12 +308,9 @@ button.totop {
 }
 */
 
-
-
 i {
     margin-right: 4px;
 }
-
 
 
 
@@ -429,6 +450,7 @@ i {
 .depobody .dbtn {
   background-color: #fc6;
 }
+
 
 
 
@@ -654,7 +676,49 @@ i {
     margin: 1%;
 }
 
+.reception-box {
+    text-decoration: none;
+    color: #eee;
+    background-color: orangered;
+    width: 23%;
+    height: 84px;
+    padding: 6px;
+    margin: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.update-box {
+    text-decoration: none;
+    color: #eee;
+    background-color: #0af;
+    width: 23%;
+    height: 84px;
+    padding: 6px;
+    margin: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.guest {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    margin: 0 0 50px;
+}
+
+.guest p {
+    font-size: 24px;
+    text-align: center;
+}
+
+.guest .flexbox {
+    justify-content: flex-end;
+}
 
 
 /* checking.html -------------------------------*/
@@ -1095,10 +1159,6 @@ table.chit td {
     margin: 6px 0;
 }
 
-.r-body td {
-/*    border: solid 1px #999; */
-}
-
 .r-name {
     border-bottom: solid 1px;
     margin: 2px;
@@ -1153,6 +1213,82 @@ table.chit td {
 .r-body tr:last-child td:nth-child(2) {
     border-bottom: solid 1px;
 }
+
+
+
+
+/* function ----------------------------------------*/
+.f-sel {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20%;
+}
+
+.k-btn, .z-btn, .y-btn {
+   width: 200px; 
+   height: 80px;
+   font-size: 30px;
+   font-weight: bold;
+   color: #fff;
+}
+
+.k-btn {
+    background-color: #0cc;
+}
+.z-btn {
+    background-color: #16f;
+}
+.y-btn {
+ /*   background-color: #96f; */
+    background-color: #16f;
+}
+
+
+
+/* stock ----------------------------------------*/
+.s-tbl table{
+    margin: 40px auto;
+    font-size: 20px;
+}
+
+.stock table, .stock th, .stock td {
+    border: solid 1px #333;
+}
+
+.stock th {
+    background-color: #16f;
+    color: #fff;
+    font-weight: initial;
+}
+
+.stock td:nth-child(n+4) {
+    text-align: center;
+}
+
+
+
+
+/* stock ----------------------------------------*/
+
+.r-tbl table{
+    margin: 40px auto;
+    font-size: 16px;
+}
+
+.reserve table, .reserve th, .reserve td {
+    border: solid 1px #333;
+}
+
+.reserve th {
+    background-color: #16f;
+    color: #fff;
+    font-weight: initial;
+}
+
+.reserve td:nth-child(4), .reserve td:last-child {
+    text-align: center;
+}
+
 
 
 
