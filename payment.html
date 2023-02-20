@@ -38,17 +38,19 @@
                 <table>
                     <tbody>
                         <tr>
-                            <td colspan="3">支払い履歴</td>
+                            <td colspan="4">支払い履歴</td>
                         </tr>
                         <tr>
                             <td>食品</td>
                             <td>50,000円</td>
                             <td><button class="fbtn">修正</button></td>
+                            <td><button class="delbtn">削除</button></td>
                         </tr>
                         <tr>
                             <td>人件費</td>
                             <td>20,000円</td>
                             <td><button class="fbtn">修正</button></td>
+                            <td><button class="delbtn">削除</button></td>
                         </tr>
 
                     </tbody>
@@ -98,7 +100,14 @@
                                             <input type="number" name="id" required="required" placeholder="支払額を入力" onFocus="onNum()" id="num"></input>
                                         </div>
                                     </td>
-                                    <td rowspan="2"><button class="pbtn" type="submit" id="pay">支払う</button></td>
+                                    <td rowspan="3"><button class="pbtn" type="submit" id="pay">支払う</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-item">
+                                            <input type="number" name="id" required="required" placeholder="支払本体額を入力" onFocus="onNum()" id="num"></input>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>

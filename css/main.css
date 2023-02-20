@@ -47,6 +47,13 @@ p {
     font-weight: bold;
 }
 
+.err {
+    background-color: #fcc;
+    color: red;
+    font-size: 16px;
+    width: 100%;
+}
+
 .err-area {
     background-color: #fcc;
     color: red;
@@ -89,13 +96,11 @@ footer button {
     right: 3%;
 }
 
-
 .topbtn, .botbtn {
     height: 30px;
     width: 100px;
     margin: 0 20px;
 }
-
 .botbtn {
     font-size: 18px;
 }
@@ -108,23 +113,11 @@ h3 {
 }
 
 
-/* 数値入力のスピンボタンを削除 */
-input[type="number"]::-webkit-outer-spin-button, 
-input[type="number"]::-webkit-inner-spin-button { 
-    -webkit-appearance: none; 
-    margin: 0; 
-} 
-input[type="number"] { 
-    -moz-appearance:textfield; 
-} 
-
-
 .form-wrapper {
     background: #ddd;
-    margin: 1em auto;
+    margin: 10px auto;
     padding: 1em 1em 0;
 }
-
 
 button {
     border-radius: 5px;
@@ -142,6 +135,12 @@ button:active {
     width: 100%;
     font-size: 20px;
 }
+.delbtn {
+    width: 95%;
+    font-size: 20px;
+    background-color: #f44;
+    color: #ddd;
+}
 
 .gbtn {
     font-size: 20px;
@@ -154,7 +153,7 @@ button.totop {
     color: white;
     font-weight: bold;
     font-size: 14px;
-    height: 26px;
+    height: 40px;
     border: none;
 }
 
@@ -164,7 +163,6 @@ button.totop {
     justify-content: center;
     margin-top: 16px;
 }
-
 .clrbtn {
     font-size: 20px;
     width: 70%;
@@ -183,21 +181,199 @@ button.totop {
     margin: 0 2% 5% 0;
     display: none;
 }
-
 .ten tr {
     height: 25%;
 }
-
 .ten td {
     width: 25%;
 }
-
 .tenKey {
 	font-size:	28pt;
 	height:		100%;
 	width:		100%;
 }
 
+
+
+/* 数値入力のスピンボタンを削除 ------------------------------*/
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+} 
+input[type="number"] { 
+    -moz-appearance:textfield; 
+} 
+
+
+/* チェックボックス ----------------------------------------*/
+.chk {
+	align-items: center;
+}
+.chk input {
+	margin: 0 8px;
+    transform: scale(1.6);
+}
+
+
+/* モーダル ---------------------------------------------------*/
+.modal-wrapper {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 60px 10px;
+  text-align: center
+}
+
+.modal-wrapper:not(:target) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+}
+
+.modal-wrapper:target {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .4s, visibility .4s;
+}
+
+.modal-wrapper::after {
+  display: inline-block;
+  height: 100%;
+  margin-left: -.05em;
+  vertical-align: middle;
+  content: ""
+}
+
+.modal-wrapper .modal-window {
+  box-sizing: border-box;
+  display: inline-block;
+  z-index: 20;
+  position: relative;
+  width: 70%;
+  max-width: 500px;
+  padding: 30px 10px;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, .6);
+  vertical-align: middle
+}
+
+.modal-wrapper .modal-window2 {
+  box-sizing: border-box;
+  display: inline-block;
+  z-index: 20;
+  position: relative;
+  width: 90%;
+  padding: 30px 10px;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, .6);
+  vertical-align: middle
+}
+
+.modal-wrapper .modal-window .modal-content, 
+.modal-wrapper .modal-window2 .modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-overlay {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .8)
+}
+
+.modal-wrapper .modal-close {
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  color: #95979c !important;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0
+}
+
+.modal-wrapper .modal-close:hover {
+  color: #2b2e38 !important
+}
+
+.modal-btn {
+	font-size: 20px;
+	height: 50px;
+	width: 140px;
+	margin: 4px;
+	color:#fff;
+	border: 1px solid #333;
+	border-radius: 0.3rem;
+}
+
+.modal-content select {
+    height: 42px;
+    font-size: 22px;
+    font-weight: bold;
+    min-width: 60px;
+}
+
+.modal-content p {
+    font-size: 20px;
+    margin: 16px 0 14px;
+}
+
+.modal-err {
+    background-color: #fcc;
+    color: red;
+    margin: 0;
+    text-align: left;
+    padding: 6px 34px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.modal-content h2 {
+    margin: 14px 0;
+}
+
+.modal-content table {
+    margin: 0 auto;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.modal-content td {
+    padding: 6px;
+}
+
+.modal-content td:first-child {
+    text-align: right;
+}
+
+.modal-window2 table {
+    font-size: 16px;
+}
+.modal-window2 td {
+    padding: 2px 5px;
+}
+.modal-window2 input {
+    transform: scale(1.8);
+}
+.modal-window2 select {
+    height: 30px;
+    font-size: 18px;
+}
 
 
 
@@ -217,11 +393,7 @@ button.totop {
 .index tr {
     height: 20%;
 }
-/*
-.index tr:first-child {
-    height: 20%;
-}
-*/
+
 .index td {
 	padding: 0px;
 	width: calc(100%/3);
@@ -251,9 +423,10 @@ button.totop {
     color: #fff;
     font-size: 30px;
     border-radius: 4px;
-    background-color: #11a37f;
+    background-color: #fdd;
     font-weight: bold;
     text-decoration: none;
+    color: #333;
 }
 
 .menubtn :active {
@@ -264,29 +437,29 @@ button.totop {
 }
 
 #exc a {
-    background-color: #0af;
+    background-color: #fdd;
 }
 #tenken a {
-    background-color: #05f;
+    background-color: #fdd;
 }
 #seisan a {
-    background-color: #50f;
+    background-color: #fdd;
 }
 #fix a {
-    background-color: #f0f;
+    background-color: #fdd;
 }
 #manage a {
-    background-color: #f05;
+    background-color: #fdd;
 }
 #in a {
-    background-color: #fa0;
+    background-color: #fdd;
 }
 #out a {
-    background-color: #f50;
+    background-color: #fdd;
 }
 
 #kaikei a {
-    background-color: #f44;
+    background-color: #c99;
 }
 
 #exc0 a,
@@ -298,15 +471,11 @@ button.totop {
     background-color: #999;
 }
 
-
-/*
-.menubtn :active {
-  border-top: 4px solid #0f745b;
-  border-right: 4px solid #8cf9de;
-  border-bottom: 4px solid #48ecc4;
-  border-left: 4px solid #0a5f4a;
+#open0 a,
+#manage0 a,
+#fix0 a {
+    background-color: #486;
 }
-*/
 
 i {
     margin-right: 4px;
@@ -500,7 +669,6 @@ i {
 .pay-input .form-item {
     margin: 0;
     width: 96%;
-    height: 50px;
 }
 
 
@@ -516,6 +684,8 @@ i {
 
 
 .pfb {
+    display: flex;
+    justify-content: center;
     width: 90%;
     margin: 0 auto;
 }
@@ -540,7 +710,7 @@ i {
 .pbtn {
     font-size: 20px;
     width: 100%;
-    height: 100px;
+    height: 150px;
     color: #fff;
     font-weight: bold;
     background-color: #f88;
@@ -676,6 +846,16 @@ i {
     margin: 1%;
 }
 
+.flexbox .box3 {
+    text-decoration: none;
+    color: #000;
+    background-color: #9ff;
+    width: 23%;
+    padding: 6px;
+    margin: 1%;
+}
+
+
 .reception-box {
     text-decoration: none;
     color: #eee;
@@ -738,16 +918,34 @@ i {
     overflow: auto;
 }
 
+.chking-log button {
+    height: 42px;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
 .chking-log table {
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     margin: 0 auto;
     width: 100%;
 }
 
 .chking-log tr {
-    height: 24px;
+    height: 48px;
     border-bottom: 1px solid #999;
+}
+
+.chking-log tr:nth-child(n+2) td:first-child {
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+}
+
+.chking-log tr:nth-child(n+2) td:nth-child(2) {
+    padding: 0 6px;
 }
 
 .chking-log td:last-child {
@@ -759,7 +957,8 @@ i {
     width: 47%;
     position: fixed;
     bottom: 0;
-    margin: 0 0 5% 2%;
+    left: 2%;
+    margin-bottom: 6%;
 }
 
 .chking-total table {
@@ -801,10 +1000,21 @@ i {
     width: 98%;
 }
 
+.dsc-sel .form-item {
+    display: flex;
+    align-items: center;
+    margin-right: 4px;
+}
+
+.dsc-sel .form-item input {
+    margin-right: 4px;
+}
+
+/*
 .dsc-sel table {
     width: 100%;
 }
-
+*/
 
 .cbox {
     width: 90%;
@@ -820,7 +1030,12 @@ i {
     align-items: center;
 }
 
-.cbox .form-item input {
+.cbox .form-item, .cfb .form-item {
+    display: flex;
+    align-items: center;
+}
+
+.cbox .form-item input, .cfb .form-item input {
     margin-right: 4px;
 }
 
@@ -830,12 +1045,13 @@ i {
 }
 
 .chk-input .form-wrapper {
+    max-width: 660px;
     padding: 1em 0 1px;
 }
 
 .chk-input .form-wrapper td {
-    width: 50%;
-    font-size: 22px;
+    width: 26%;
+    font-size: 20px;
 }
 
 .chkform {
@@ -847,10 +1063,9 @@ i {
 }
 
 .chkform .form-item input {
-    font-size: 24px;
+    font-size: 20px;
     height: 38px;
 }
-
 
 .cfb {
     width: 90%;
@@ -864,13 +1079,11 @@ i {
     border-bottom: solid 2px #999;
 }
 
-
 .chk-input .form-item {
     margin: 0;
     width: 96%;
     height: 38px;
 }
-
 
 .cbtn {
     font-size: 20px;
@@ -879,12 +1092,34 @@ i {
     color: #fff;
     font-weight: bold;
     background-color: #f88;
+    margin-top: 10px;
+}
+
+
+.separate {
+    text-align: center;
+    width: 47%;
+    padding: 0 1em;
+    position: fixed;
+    bottom: 0;
+    right: 2%;
+    margin-bottom: 6%;
+}
+
+.sbtn {
+    font-size: 20px;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #869;
 }
 
 
 select.p-num-sel {
     width: 50px;
 }
+
 
 
 
@@ -929,7 +1164,6 @@ select.p-num-sel {
     text-align: right;
 }
 
-
 .chkout-ctrl {
     width: 47%;
     position: fixed;
@@ -967,7 +1201,9 @@ select.p-num-sel {
 .co-form {
     margin-bottom: 2em;
 }
-
+.co-form .form-item {
+    width: 80%;
+}
 
 
 #print_area h2 {
@@ -1087,6 +1323,16 @@ table.chit td {
 .add-item .form-wrapper {
     background-color: #cff;
     padding-bottom: 1em;
+}
+
+.add-item tr:first-child {
+    font-weight: bold;
+}
+
+.add-item button {
+    height: 42px;
+    font-size: 16px;
+    padding: 0 10px;
 }
 
 .add-item input[type="number"] {

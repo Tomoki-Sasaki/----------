@@ -34,52 +34,293 @@
 
     <div class="checks">
         <div class="flexbox">
-            <a href="checking.html" class="box1">
-                <div class="b-1">A席 12名</div>
+            <a href="#modal2-1" class="box1">
+                <div class="b-1">店内1番席&emsp;12名</div>
                 <div class="b-2">19:20～ 男2:女10</div>
                 <div class="b-3">未提供:なし</div>
             </a>
             <a href="checking.html" class="box2">
-                <div class="b-1">B席 20名</div>
+                <div class="b-1">店内2番席 20名</div>
                 <div class="b-2">18:40～ 男10:女10</div>
                 <div class="b-3">未提供:あり</div>
             </a>
             <a href="checking.html" class="box1">
-                <div class="b-1">C席 名</div>
+                <div class="b-1">店内3番席 名</div>
                 <div class="b-2"></div>
                 <div class="b-3"></div>
             </a>
             <a href="checking.html" class="box1">
-                <div class="b-1">D席</div>
+                <div class="b-1">店内4番席</div>
                 <div class="b-2"></div>
                 <div class="b-3"></div>
             </a>
 
             <a href="checking.html" class="box1">
-                <div class="b-1">E席</div>
+                <div class="b-1">店内5番席</div>
                 <div class="b-2">19:00</div>
                 <div class="b-3">未提供:</div>
             </a>
             <a href="checking.html" class="box1">
-                <div class="b-1">F席</div>
+                <div class="b-1">店内6番席</div>
                 <div class="b-2"></div>
                 <div class="b-3"></div>
             </a>
+            <a href="checking.html" class="box3">
+                <div class="b-1">持帰り</div>
+                <div class="b-2"></div>
+                <div class="b-3"></div>
+            </a>
+
         </div>
 
         <div class="guest">
             <div class="flexbox">
-                <a href="#modal2-1" class="reception-box">
+                <a href="#modal1-1" class="reception-box">
                     <p>新規受付</p>
                 </a>
-                <a href="#modal2-1" class="update-box">
+                <a href="checks.html" class="update-box">
                     <p>更新</p>
                 </a>
             </div>
         </div>
-
-
     </div>
+
+
+	<div class="modal-wrapper" id="modal1-1">
+		<a href="#!" class="modal-overlay"></a>
+		<div class="modal-window">
+			<div class="modal-content">
+                <div class="modal-err">エラーメッセージ</div>
+				<h2>新規受付</h2>
+                <p>
+                    <span class="chk">
+                        <input type="radio" id="1" name="topping" value="1" checked><label for="1">店内</label>&ensp;
+                        <input type="radio" id="2" name="topping" value="2"><label for="2">持帰り</label>&ensp;
+                        <input type="radio" id="3" name="topping" value="3"><label for="3">出前</label>
+                    </span>
+                </p>
+                <p>
+                    男性
+                    <select>
+                        <option> - </option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>&thinsp;人&emsp;
+                    女性
+                    <select>
+                        <option> - </option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>&thinsp;人
+                </p>
+                <table>
+                    <!--
+                    <tr>
+                        <td>客数</td>
+                        <td colspan="3">
+                            <select>
+                                <option> - </option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>&thinsp;人
+                        </td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td>案内する座席</td>
+                        <td colspan="3">
+                            <select>
+                                <option> - </option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>合わせる座席</td>
+                        <td>
+                            <select>
+                                <option> - </option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option> - </option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option> - </option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+
+				<div>
+					<button class="modal-btn" onclick="location.href='#!'" style="background-color: #666;">キャンセル</button>
+					<button class="modal-btn" onclick="location.href='#modal1-2'" style="background-color: #16f;">確認</button>
+				</div>
+			</div>
+			<a href="#!" class="modal-close">×</a>
+		</div>
+	</div>
+
+	<div class="modal-wrapper" id="modal1-2">
+		<a href="#!" class="modal-overlay"></a>
+		<div class="modal-window">
+			<div class="modal-content">
+				<h2>受付内容</h2>
+                <p>店内</p>
+                <p>○人</p>
+                <p>○番席</p>
+                <p>＋○番席</p>
+				<p>以上で受付してよろしいですか？</p>
+				<div>
+					<button class="modal-btn" onclick="location.href='#modal1-1'" style="background-color: #666;">戻る</button>
+					<button class="modal-btn" onclick="location.href='#modal1-3'" style="background-color: #16f;">確定</button>
+				</div>
+			</div>
+			<a href="#!" class="modal-close">×</a>
+		</div>
+	</div>
+
+	<div class="modal-wrapper" id="modal1-3">
+		<a href="#!" class="modal-overlay"></a>
+		<div class="modal-window">
+			<div class="modal-content">
+				<h2>新規受付</h2>
+				<p>受付しました。</p>
+				<div>
+					<button onclick="location.href='#!'" class="modal-btn" style="background-color: #16f;">OK</button>
+				</div>
+			</div>
+			<a href="#!" class="modal-close">×</a>
+		</div>
+	</div>
+
+
+    <div class="modal-wrapper" id="modal2-1">
+		<a href="#!" class="modal-overlay"></a>
+		<div class="modal-window">
+			<div class="modal-content">
+				<h2>座席操作</h2>
+				<div>
+					<button class="modal-btn" onclick="location.href='#!'" style="background-color: #666;">キャンセル</button>
+					<button class="modal-btn" onclick="location.href='#modal2-2'" style="background-color: #090;">編集</button>
+					<button class="modal-btn" onclick="location.href='checking.html'" style="background-color: #16f;">会計</button>
+				</div>
+			</div>
+			<a href="#!" class="modal-close">×</a>
+		</div>
+	</div>
+
+	<div class="modal-wrapper" id="modal2-2">
+		<a href="#!" class="modal-overlay"></a>
+		<div class="modal-window">
+			<div class="modal-content">
+                <div class="modal-err">エラーメッセージ</div>
+				<h2>座席編集</h2>
+                <p>
+                    <span class="chk">
+                        <input type="radio" id="1" name="topping" value="1" checked><label for="1">店内</label>&ensp;
+                        <input type="radio" id="2" name="topping" value="2"><label for="2">持帰り</label>&ensp;
+                        <input type="radio" id="3" name="topping" value="3"><label for="3">出前</label>
+                    </span>
+                </p>
+                <p>
+                    男性
+                    <select>
+                        <option> - </option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>&thinsp;人&emsp;
+                    女性
+                    <select>
+                        <option> - </option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>&thinsp;人
+                </p>
+                <table>
+                    <!--
+                    <tr>
+                        <td>客数</td>
+                        <td colspan="3">
+                            <select>
+                                <option> - </option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>&thinsp;人
+                        </td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td>案内する座席</td>
+                        <td colspan="3">
+                            <select>
+                                <option> - </option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>合わせる座席</td>
+                        <td>
+                            <select>
+                                <option> - </option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option> - </option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option> - </option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+
+				<div>
+					<button class="modal-btn" onclick="location.href='#!'" style="background-color: #666;">キャンセル</button>
+					<button class="modal-btn" onclick="location.href='#modal1-2'" style="background-color: #16f;">確認</button>
+				</div>
+			</div>
+			<a href="#!" class="modal-close">×</a>
+		</div>
+	</div>
+
+
+
 
     <footer>
         <div class="footer-inner">
